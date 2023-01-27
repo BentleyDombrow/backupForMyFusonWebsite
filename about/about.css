@@ -1,0 +1,1235 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+:root{
+
+    --firstSectionHeight: 95vh;
+    --responsiveFirstSectionHeight: 85vh;
+
+
+}
+
+*::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #0D0D0D !important;
+    overflow-x: none;
+
+}
+
+.redText{
+
+    color: #ee3342 !important;
+
+}
+
+.whiteText{
+
+    color: #FFF !important;
+
+}
+
+.noWrap{
+
+    white-space: nowrap;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+@media screen and (min-width: 1050px) {
+    .gap{
+
+        padding-right: 20px;
+
+    }
+}
+
+
+/*
+NAVBAR
+--------------------------------------------------------------------------------------
+All styling for the Nav Bar, none of this code is for anything else
+*/
+
+
+.menuItem{
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+
+.menuOptions{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    
+}
+
+.navBarParent{
+
+    height: 15vh;
+
+}
+
+
+.navBar{
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(13,13,13);
+    background: linear-gradient(180deg, rgba(13,13,13,1) 0%, rgba(13,13,13,0.4150035014005602) 72%, rgba(13,13,13,0) 100%);
+    z-index: 999;
+    transition: 350ms;
+    padding-bottom: 20px;
+    
+}
+
+
+.menuText a{
+
+    color: #FFF !important;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 35px;
+    text-decoration: transparent;
+    transition: 350ms;
+
+}
+
+.menuItem a:hover{
+
+    color: #FFF !important;
+    text-decoration: #ee3342 solid underline !important;
+    text-underline-offset: 7px;
+    padding-bottom: 5px;
+    transition: 350ms;
+    
+
+}
+
+
+
+.contactUs a{
+    padding: 20px;
+    border: solid 3px #ee3342;
+    border-radius: 15px;
+    transition: 350ms;
+    width: fit-content;
+
+}
+
+
+.contactUs :hover{
+    
+    background-color: #ee3342;
+    transition: 350ms linear;
+    color: #0D0D0d;
+
+
+}
+
+.logo{
+
+    z-index: 999;
+
+}
+
+.logo img{
+
+    box-sizing: border-box;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    z-index: 999;
+    
+    
+}
+
+
+.instagramContainer{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(../assets/Transparent\ Instagram\ Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.facebookContainer{
+
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(../assets/Facebook\ Icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.instagramContainer:hover{
+    background-image: url(../assets/Transparent\ Instagram\ Logo\ Red.png);
+    transition: 350ms;
+}
+
+.facebookContainer:hover{
+    background-image: url(../assets/Facebook\ Icon\ Red.png);
+    transition: 350ms;
+}
+
+/*Styling for transforming the Hamburger Menu into the X when clicked 
+---------------------------------------------------------------------------------------------
+*/
+
+.hamburgerMenu{
+
+display: none;
+z-index: 2;
+
+}
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/*Styling for Side Nav bar when in responsive mode 
+---------------------------------------------------------------------------------------------
+*/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #0D0D0d; /* Black*/
+    overflow-x: none; /* Disable horizontal scroll */
+    padding-top: 140px; /* Place content 60px from the top */
+    transition: 0.5s;  /*0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 32px 8px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover{
+    background-color: #ee3342;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 700px) {
+    .sidenav {padding-top: 60px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+/*Media Quires for making the page responsive when you click on different things
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1300px) {
+    
+    .menuItem{
+
+        display: none;
+
+    }
+
+    .contactUs{
+
+        display: flex;
+
+    }
+
+    .navBar{
+     
+        grid-template-columns: 3fr 1fr;
+        
+    }
+
+    .hamburgerMenu{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .menuOptions{
+
+        justify-content: flex-end;
+        margin-right: 40px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .contactUs{
+
+        display: none;
+
+    }
+
+    .menuOptions{
+
+        margin-right: 40px;
+
+    }
+
+    .logo img{
+
+        width: 240px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 40px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 15px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .slogan h1{
+
+        font-size: 28px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 2vh;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .logo img{
+
+        width: 180px;
+         
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .logo img{
+
+        width: 120px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 15px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/*
+Styling for the main conent body of the header section of the page, essentially this is just everything in the header besides the nav bar
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.header{
+
+    background-image: url(../assets/About\ Background\ Images.JPG);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
+}
+
+.headerBody{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10vh 0vh 0px;
+    height: 65vh;
+    
+}
+
+.headerTitle h1{
+
+    font-weight: 400;
+    font-size: 8vh;
+
+}
+
+.headerText p{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 4vh;
+
+}
+
+.headerLine hr{
+
+    margin: 0vw 10vw 0vw;
+    background-color: #ee3342;
+    height: 3px;
+    border: none;
+
+}
+
+.headerDownArrow{
+
+    margin-top: 20vh;
+
+}
+
+
+.headerDownArrow img{
+    width: 5vw;
+
+}
+
+.greyFilter{
+
+    background-color: rgba(13,13,13,0.6);
+
+}
+
+
+/*
+Styling for our experiences 
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.ourHistory, .ourExperience{
+
+    background-color: #FFF;
+    padding: 5vh 0px;
+
+}
+.ourExperience{
+
+    padding-bottom: 20vh;
+
+}
+
+.ourHistoryTitle h2, .ourExperienceTitle h2{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 6vh;
+    padding-left: 5vw;
+
+
+}
+
+.ourHistoryText p, .ourExperienceText p{
+
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    padding: 0px 10vw;
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+/*
+Styling for the past events section of the website
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.pastEventsTitle h2{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 6vh;
+    padding-left: 5vw;
+    color: #FFF;
+    margin-top: 10vh;
+
+
+}
+
+.pastEvent{
+
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    margin: 25vh auto;
+    
+}
+
+.imageOverlay{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(13,13,13,0.6);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+
+}
+
+.pastEvent p, .pastEvent h3{
+
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 2.5vh;
+    font-weight: 400;
+    color: #FFF;
+
+
+
+}
+
+.pastEvent h3{
+
+    font-size: 4vh;
+    font-weight: 500;
+    padding: 0px;
+    padding-left: 20px;
+    padding-bottom: 5vh;
+    margin-bottom: 0px;
+    border-bottom: 3px solid #FFF;
+    margin: 0px 2.5%;
+}
+
+.pastEvent p{
+
+    margin: 0px 2.5%;
+    margin-bottom: 10vh;
+
+}
+
+.pastEvent1{
+
+    background-image: url(../assets/PKP\ Frost\ Event.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10vh;
+    background-position: 50% 0;
+}
+
+.pastEvent2{
+
+    background-image: url(../assets/crowdLitUp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pastEvent3{
+
+    background-image: url(../assets/HSE\ Reunion.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .imageOverlay{
+
+        height: 100%;
+        width: 100%;
+        background-color: rgba(13,13,13,0.75);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .pastEvent p{
+
+       text-align: center;
+    
+    }
+}
+
+
+
+
+/*
+Styling for our services offered in the about page
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+.ourServices{
+
+    background-color: #0D0D0D;
+    padding: 10vh 0px;
+
+}
+
+.ourServicesContent{
+
+    padding: 10vh 5vw;
+    background-color: #0D0D0d ;
+
+}
+
+.ourServicesTitle h2{
+
+    font-size: 6vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-left: 5vw;
+    color: #FFF;
+    margin: 0px;
+}
+    
+[data-tab-info] {
+    display: none;
+}
+    
+.active[data-tab-info] {
+    display: block;
+}
+    
+.tab-content {
+    font-size: 30px;
+    color: #0d0d0d;
+    background-color: #F0F0F0;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.tabs__tab{
+
+    margin: auto;
+
+}
+
+.tabs__tab h4{
+
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ee3342;
+    margin-top: 0px;
+    font-size: 6vh;
+    font-weight: 400;
+
+}
+
+.tab-content p{
+
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3vh;
+    padding: 0px 5vw;
+    margin:0px;
+}
+    
+.tabs {
+    font-size: 3vh;
+    color: #0d0d0d;
+    display: none;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+    
+.tabs span {
+    background: #FFF;
+    padding: 10px;
+    border-bottom: 2px solid #0d0d0d;
+    transition: 350ms;
+    margin-bottom: 20px;
+}
+    
+.tabs span:hover {
+    background: #ee3342;
+    cursor: pointer;
+    color: #FFF;
+    transition: 350ms;
+}
+
+.tabs > .active{
+
+    background-color: #ee3342;
+    transition: 350ms;
+    color: #FFF;
+
+}
+
+.tabsTitle h3{
+
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 4vh;
+    padding: 10px 15px;
+    border: 3px solid #ee3342;
+    border-radius: 15px;
+}
+
+.tabsDescription{
+
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 3vh;
+    padding-left: 10vw;
+    text-align: left;
+
+}
+
+
+
+.dropdown {
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.dropdown-content {
+
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    transition: all 350ms;
+}
+
+.learnMoreButton{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.learnMoreButton a{
+
+    margin: auto;
+    padding: 20px 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: transparent;
+    border: 3px #ee3342 solid;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    font-size: 4vh;
+    transition: 350ms;
+
+}
+
+.learnMoreButton a:hover{
+
+    margin: auto;
+    padding: 20px 20px;
+    color: #0d0d0d;
+    background-color: #ee3342;
+    transition: 350ms;
+
+}
+
+@media only screen and (max-width: 950px) {
+
+
+    .tab-content{
+
+        height: 85vh;
+
+    }
+
+    .tabsDescription{
+
+        padding-left: 0px;
+        padding: 0px 5vw;
+        text-align: center;
+        font-size: 3vh;
+
+    }
+
+    .ourServicesTitle h2{
+
+        padding: 0px;
+        text-align: center;
+
+    }
+
+    .tab-content {
+        border-radius: 15px;
+    }
+
+    .tab-content p {
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 2.6vh;
+        padding: 0px 5vw;
+        margin: 0px;
+    }
+
+    .pastEvent3{
+
+        margin-bottom: 0px;
+
+    }
+
+    .pastEvent2{
+
+        margin-top: 15vh;
+
+    }
+    
+}
+
+
+
+/*
+.dropdown:hover .dropdown-content {
+display: flex;
+flex-direction: column;
+}
+*/
+
+  /*
+Styling for the Footer of the website
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.footer{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10vh;
+    padding: 5vh;
+
+}
+
+.topFooter{
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    border-bottom: solid 1.5px #FFF;
+    grid-column-gap: 10vw;
+    padding: 5vh 0px;
+
+}
+
+.footerLinks{
+
+    margin:auto 0px auto;
+
+}
+
+.aFooterLinks{
+
+    border-bottom: 3px solid transparent;
+    transition: 350ms;
+
+}
+
+.aFooterLinks:hover{
+
+    border-bottom: 3px solid #ee3342;
+    transform: translateY(-3px);
+    transition: 350ms;
+    color: #FFF !important;
+
+}
+
+.linkList{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footerContactInfo{
+
+   margin: auto 0px auto;
+
+}
+
+.contactInfoContainer{
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: auto 0px;
+
+}
+
+.pContactInfoContainer{
+
+    margin: auto;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pContactInfoContainer p{
+
+    margin: 0px;
+
+}
+
+.aFooterLinks{
+
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    height: fit-content;
+
+}
+
+.footerSocialParent{
+
+    margin:auto;
+    display: flex;
+
+}
+
+.footerSocial:hover{
+
+    transform: translateY(-3px);
+
+}
+
+.footerImageContainer{
+
+    margin-top: auto;
+
+}
+
+.footerImageContainer img{
+
+    width: 20vw;
+    padding-right: 20px;
+
+}
+
+.footerCompanyInfo p{
+
+    color:#FFF;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vh;
+    margin: 0px;
+
+}
+
+.footerCompanyInfo{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.bottomFooter{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.pHandler{
+
+    margin-top: auto;
+
+}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+@media only screen and (max-width: 1300px) {
+
+    .pContactInfoContainer{
+
+        font-size: 1.8vw;
+
+    }
+
+    .aFooterLinks{
+
+font-size: 2.1vh;
+
+}
+    .topFooter{
+
+        grid-column-gap: 5vw;;
+
+    }
+
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+
+    .linkList{
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .aFooterLinks{
+
+        font-size: 3vh;
+        margin: 20px;
+
+    }
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+    .aFooterLinks{
+        text-align: center;
+
+    }
+
+    .bottomFooter{
+
+        flex-direction: column ;
+        justify-content: center;
+
+    }
+    .footerImageContainer{
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 20px;
+       
+
+    }
+
+    .footerImageContainer img{
+
+        width: 50vw;
+        padding: 20px;
+
+    }
+
+    .footer{
+
+        grid-template-rows: 3fr 2fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+    .pHandler p{
+
+        font-size: 1.5vh;
+        text-align: center;
+        padding: 0px 2.5px 10px
+
+    }
+
+    .footerCompanyInfo{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+        font-size: 2.5vw;
+
+    }
+
+    .contactInfoContainer{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .footer{
+
+        grid-template-rows: 2fr 1fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+
+    .contactInfoContainer{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .pContactInfoContainer{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+font-size: 6vw;
+
+}
+
+.footerImageContainer img{
+
+    width: 75vw;
+    padding: 0px;
+
+}
+
+.linkList{
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .linkList{
+
+        justify-content: center;
+
+    }
+
+}
+
+@media only screen and (max-width: 200px) {
+
+    .pContactInfoContainer{
+
+        font-size: 5vw;
+
+    } 
+
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact us about your next event">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="./contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.webp">
+    
+    <link rel="stylesheet" href="./contactForm/css/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	  <link rel="stylesheet" href="./contactForm/css/style.css">
+
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+
+</head>
+
+<body>
+<div class="header">
+  <div class="greyFilter">
+    <div class="navBarParent">
+        <div class="navBar">
+
+            <div class="logo">
+
+                <a href="https://www.fusonent.com/">
+                    <img src="../assets/FusonLogo (3).png">
+                </a>
+
+            </div>
+
+            <div class="menuOptions">
+
+                <div class="menuItem menuText home">
+
+                    <a href="https://www.fusonent.com">Home</a>
+
+                </div>
+
+                <div class="menuItem menuText about">
+
+                    <a href="https://www.fusonent.com/about">About</a>
+
+                </div>
+
+                <div class="menuItem menuText reviews">
+
+                    <a href="https://www.fusonent.com/reviews">Reviews</a>
+
+                </div>
+
+                <div class="menuItem socialMedia">
+
+                    
+                    <a href="https://www.instagram.com/fusonent/?hl=en">
+                        <div class="instagramContainer"></div>
+                    </a>    
+                    
+
+                    <a href="https://www.facebook.com/Fuson-Entertainment-100441365881576">
+                        <div class="facebookContainer"></div>
+                    </a>
+
+                </div>
+
+                <div class="hamburgerMenu">
+
+                    <div class="container" onclick="transform(this)">
+
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+
+              <a href="https://www.fusonent.com">Home</a>
+              <a href="#"  class="redText">Contact Us</a>
+              <a href="https://www.fusonent.com/about">About</a>
+              <a href="https://www.fusonent.com/reviews">Reviews</a>
+              <a href="https://www.fusonent.com/cookies">Cookies</a>
+              <a href="https://www.fusonent.com/privacy">Privacy</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="headerBody">
+
+        <div class="headerTitle headerContent">
+            <h1 class="redText">Contact Us</h1>
+        </div>
+
+        <div class="headerLine headerContent">
+            <hr>
+        </div>
+
+        <div class="headerText headerContent">
+            <p class="redText">About Your Next Event</p>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="contactForm">
+
+
+  <div class="contactFormTitle">
+    <h2>Get In Touch</h2>
+    <hr>
+  </div>
+  
+
+<div class="contactFormImportedCode">
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+          <div class="wrapper">
+            <div class="row no-gutters">
+              <div class="col-md-7 d-flex align-items-stretch">
+                <div class="contact-wrap w-100 p-md-5 p-4">
+                  <div id="form-message-warning" class="mb-4"></div> 
+                  <div id="form-message-success" class="mb-4">
+                    Your message was sent, thank you!
+                  </div>
+                  <form id="contactForm" name="contactForm" method="post">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="name" id="name" placeholder="Name *">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Email *">
+                        </div>
+                      </div>
+                      <div class="col-md-12"> 
+                        <div class="form-group">
+                          <input type="phone" class="form-control" name="phone" id="phone" placeholder="Phone #">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="date" id="datepicker" placeholder="Date of Event">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message *"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="submit" value="Send Message" class="btn btn-red">
+                          <!--<div class="submitting"></div>-->
+                        </div>
+                      </div>
+                      <p>* Indicates Required Field</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-5 d-flex align-items-stretch">
+                <div class="info-wrap w-100 p-lg-5 p-4">
+                  <h3 class="mb-4 mt-md-4">Contact Us!</h3>
+                  <div class="dbox w-100 d-flex align-items-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-phone"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><span>Phone:</span> <a href="tel://3176663170">+1 (317) 778-4636</a></p>
+                    </div>
+                  </div>
+                  <div class="dbox w-100 d-flex align-items-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-paper-plane"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><span>Email:</span> <a href="mailto:contact@fusonent.com">contact@fusonent.com</a></p>
+                    </div>
+                  </div>
+                  <div class="dbox w-100 d-flex align-items-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-globe"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><span>Website:</span> <a href="https://www.fusonent.com">fusonent.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./contactForm/js/jquery.validate.js"></script>
+  <script src="./contactForm/js/bootstrap.min.js"></script>
+  <script src="./contactForm/js/main.js"></script>
+  <script src="./contactForm/js/popper.js"></script>
+  <script src="./contactForm/js/bootstrap.min.js"></script>
+  <script src="./contactForm/js/jquery.validate.min.js"></script>
+  <!--
+   inactive code because that shit bricked my calendar selector
+      <script src="./contactForm/js/jquery.min.js"></script>
+      <script src="./contactForm/js/popper.js"></script>
+      <script src="./contactForm/js/bootstrap.min.js"></script>
+      <script src="./contactForm/js/jquery.validate.min.js"></script>
+      
+    -->
+  </div>
+</div>
+
+<div class="reachIndividually">
+
+  <div class="reachBoxTitle">
+    <h2>Need To Reach Us <span class="redText">Individually</span>?</h2>
+  </div>
+
+  <div class="reachBoxParent">
+
+    <div class="box1 reachBox">
+
+      <div class="">
+        <h3>Bentley Dombrow</h3>
+      </div>
+
+      <div class="">
+        <p>+1 (317) 666-3170</p>
+      </div>
+
+      <div class="">
+        <p><a href="mailto:bentley@fusonent.com">bentley@fusonent.com</a></p>
+      </div>
+    </div>
+
+    <div class="box2 reachBox">
+
+      <div class="">
+        <h3>Ben Lovelace</h3>
+      </div>
+
+      <div class="">
+        <p>+1 (317) 778-4636</p>
+      </div>
+
+      <div class="">
+        <p><a href="mailto:ben@fusonent.com">ben@fusonent.com</a></p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+
+  <div class="topFooter">
+
+      <div class="footerLinks">
+
+          <div class="footerListParent">
+              <div class="linkList">
+                <a href="https://www.fusonent.com" class="aFooterLinks">Home</a>
+                <a href="https://www.fusonent.com/contact" class="aFooterLinks noWrap redText">Contact Us</a>
+                <a href="https://www.fusonent.com/about" class="aFooterLinks">About</a>
+                <a href="https://www.fusonent.com/reviews" class="aFooterLinks">Reviews</a>
+                <a href="https://www.fusonent.com/cookies" class="aFooterLinks">Cookies</a>
+                <a href="https://www.fusonent.com/privacy" class="aFooterLinks">Privacy</a>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="footerContactInfo">
+
+          <div class="contactInfo">
+
+              <div class="contactInfoContainer">
+                  
+                  <div class="pContactInfoContainer">
+                      <p><span class="noWrap gap">contact@fusonent.com </span></p>
+                      <p><span class="noWrap gap">+1 (317) 778-4636</span></p>
+                  </div>
+
+                  
+                  <div class="footerSocialParent">
+
+                      <a href="https://www.instagram.com/fusonent/?hl=en">
+                          <div class="instagramContainer footerSocial"></div>
+                      </a> 
+                                       
+                      <a href="https://www.facebook.com/Fuson-Entertainment-100441365881576">
+                          <div class="facebookContainer footerSocial"></div>
+                      </a> 
+
+                  </div>  
+
+                  
+
+              </div>
+          </div>
+      </div>
+
+      
+      
+      
+
+  </div>
+
+  <div class="bottomFooter">
+
+      <div class="footerImageContainer">
+
+          <img src="../assets/FusonLogo (3).png" alt="Company Logo" class="footerImage">
+          
+      </div>
+      
+      <div class="footerCompanyInfo">
+
+          <div class="pHandler">
+              <p>© 2022 All Rights Reserved | Fuson Entertainment LLC dba. Fuson Entertainment | Fishers, IN 46037</p>
+          </div>
+      </div>
+      
+  </div>
+</div>
+
+
+<script src="./contact.js"></script>
+</body>
+</html>

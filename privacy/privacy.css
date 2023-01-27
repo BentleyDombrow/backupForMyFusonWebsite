@@ -1,0 +1,838 @@
+body{
+
+    margin: 0px;
+
+}
+
+.redText{
+
+    color: #ee3342 !important;
+
+}
+/*
+NAVBAR
+--------------------------------------------------------------------------------------
+All styling for the Nav Bar, none of this code is for anything else
+*/
+
+
+.menuItem{
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+
+.menuOptions{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    
+}
+
+.navBarParent{
+
+    height: 15vh;
+
+}
+
+
+.navBar{
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D0D0d;
+    z-index: 999;
+    transition: 350ms;
+    padding-bottom: 20px;
+    
+}
+
+
+.menuText a{
+
+    color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 35px;
+
+}
+
+.home a, .about a, .reviews a{
+
+    text-decoration: transparent;
+    transition: 350ms;
+
+}
+
+.home a:hover, .about a:hover, .reviews a:hover{
+   
+    text-decoration: #ee3342 solid underline;
+    text-underline-offset: 7px;
+    transition: 350ms;
+    transform: translateY(-3px);
+    
+
+}
+
+
+
+.contactUs a{
+    padding: 20px;
+    border: solid 3px #ee3342;
+    border-radius: 15px;
+    transition: 350ms;
+    width: fit-content;
+
+}
+
+
+.contactUs :hover{
+    
+    background-color: #ee3342;
+    transition: 350ms linear;
+    color: #0D0D0d;
+    transform: translateY(-3px);
+
+
+}
+
+.logo{
+
+    z-index: 999;
+
+}
+
+.logo img{
+
+    box-sizing: border-box;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    z-index: 999;
+    
+    
+}
+
+
+.instagramContainer{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(../assets/Transparent\ Instagram\ Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.facebookContainer{
+
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(../assets/Facebook\ Icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.instagramContainer:hover{
+    background-image: url(../assets/Transparent\ Instagram\ Logo\ Red.png);
+    transition: 350ms;
+    transform: translateY(-3px);
+}
+
+.facebookContainer:hover{
+    background-image: url(../assets/Facebook\ Icon\ Red.png);
+    transition: 350ms;
+    transform: translateY(-3px);
+}
+
+/*Styling for transforming the Hamburger Menu into the X when clicked 
+---------------------------------------------------------------------------------------------
+*/
+
+.hamburgerMenu{
+
+display: none;
+z-index: 2;
+
+}
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/*Styling for Side Nav bar when in responsive mode 
+---------------------------------------------------------------------------------------------
+*/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #0D0D0d; /* Black*/
+    overflow-x: none; /* Disable horizontal scroll */
+    padding-top: 140px; /* Place content 60px from the top */
+    transition: 0.5s;  /*0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 32px 8px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover{
+    background-color: #ee3342;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 700px) {
+    .sidenav {padding-top: 60px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+/*Media Quires for making the page responsive when you click on different things
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1300px) {
+    
+    .menuItem{
+
+        display: none;
+
+    }
+
+    .contactUs{
+
+        display: flex;
+
+    }
+
+    .navBar{
+     
+        grid-template-columns: 3fr 1fr;
+        
+    }
+
+    .hamburgerMenu{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .menuOptions{
+
+        margin-right: 40px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .contactUs{
+
+        display: none;
+
+    }
+
+    .menuOptions{
+
+        margin-right: 40px;
+
+    }
+
+    .logo img{
+
+        width: 240px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 40px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 15px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .slogan h1{
+
+        font-size: 28px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 2vh;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .logo img{
+
+        width: 180px;
+         
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .logo img{
+
+        width: 120px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 15px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 12px;
+
+    }
+
+}
+
+  /*
+Styling for the Main Section of the Privacy Page
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mainText{
+
+    padding: 10vh 10vw 20vh;
+
+}
+
+.greyedOutSection{
+
+    color: grey;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.mainTextChild{
+
+    margin-bottom: 20vh;
+    padding-left: 5vw;
+
+}
+
+.mainTextBodyHeader{
+
+    padding-left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+
+}
+
+.mainText h3{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vh;
+
+
+}
+
+.mainText h4{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+    font-weight: 400;
+
+
+}
+
+.mainText p{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2.5vh;
+
+
+}
+
+.mainText li{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2.5vh;
+    padding: 20px 10px;
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .mainText{
+
+       text-align: center;
+    
+    }
+
+    .mainTextChild{
+
+        margin-bottom: 20vh;
+        padding-left: 0px;
+    
+    }
+
+    .mainText li{
+
+        text-align: left;
+
+    }
+
+    .mainTextBodyHeader{
+
+        padding-left: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2vh;
+    
+    }
+    
+
+
+}
+
+
+  /*
+Styling for the Footer of the website
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 1050px) {
+    .gap{
+
+        padding-right: 20px;
+
+    }
+}
+
+.footer{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10vh;
+    padding: 5vh;
+    background-color: #0D0D0d;
+
+}
+
+.topFooter{
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    border-bottom: solid 1.5px #FFF;
+    grid-column-gap: 10vw;
+    padding: 5vh 0px;
+}
+
+.footerLinks{
+
+    margin:auto 0px auto;
+
+}
+
+.aFooterLinks{
+
+    border-bottom: 3px solid transparent;
+    transition: 350ms;
+
+}
+
+.aFooterLinks:hover{
+
+    border-bottom: 3px solid #ee3342;
+    transform: translateY(-3px);
+    transition: 350ms;
+    color: #FFF !important;
+
+}
+
+.linkList{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footerContactInfo{
+
+   margin: auto 0px auto;
+
+}
+
+.contactInfoContainer{
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: auto 0px;
+
+}
+
+.pContactInfoContainer{
+
+    margin: auto;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pContactInfoContainer p{
+
+    margin: 0px;
+
+}
+
+.aFooterLinks{
+
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    height: fit-content;
+
+
+}
+
+.footerSocialParent{
+
+    margin:auto;
+    display: flex;
+
+}
+
+.footerSocial:hover{
+
+    transform: translateY(-3px);
+
+}
+
+.footerImageContainer{
+
+    margin-top: auto;
+
+}
+
+.footerImageContainer img{
+
+    width: 20vw;
+    padding-right: 20px;
+
+
+}
+
+.footerCompanyInfo p{
+
+    color:#FFF;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vh;
+    margin: 0px;
+
+}
+
+.footerCompanyInfo{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.bottomFooter{
+
+display: flex;
+
+justify-content: space-between;
+}
+
+.pHandler{
+
+    margin-top: auto;
+
+}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+@media only screen and (max-width: 1300px) {
+
+    .pContactInfoContainer{
+
+        font-size: 1.8vw;
+
+    }
+
+    .aFooterLinks{
+
+font-size: 2.1vh;
+
+}
+    .topFooter{
+
+        grid-column-gap: 5vw;;
+
+    }
+
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+
+    .linkList{
+
+flex-wrap: wrap;
+
+justify-content: space-around;
+
+}
+
+    .aFooterLinks{
+
+        font-size: 3vh;
+        margin: 20px;
+
+    }
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+    .aFooterLinks{
+        text-align: center;
+
+    }
+
+    .bottomFooter{
+
+        flex-direction: column ;
+        justify-content: center;
+
+    }
+    .footerImageContainer{
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 20px;
+       
+
+    }
+
+    .footerImageContainer img{
+
+        width: 50vw;
+        padding: 20px;
+
+    }
+
+    .footer{
+
+        grid-template-rows: 3fr 2fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+    .pHandler p{
+
+        font-size: 1.5vh;
+        text-align: center;
+        padding: 0px 2.5px 10px
+
+    }
+
+    .footerCompanyInfo{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+        font-size: 2.5vw;
+
+    }
+
+    .contactInfoContainer{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .footer{
+
+        grid-template-rows: 2fr 1fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+
+    .contactInfoContainer{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .pContactInfoContainer{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+font-size: 6vw;
+
+}
+
+.footerImageContainer img{
+
+    width: 75vw;
+    padding: 0px;
+
+}
+
+.linkList{
+
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    
+    }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .linkList{
+
+        justify-content: center;
+
+    }
+
+}
+
+@media only screen and (max-width: 200px) {
+
+    .pContactInfoContainer{
+
+        font-size: 5vw;
+
+    } 
+
+}

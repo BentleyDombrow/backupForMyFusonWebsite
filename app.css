@@ -1,0 +1,1840 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+:root{
+
+    --firstSectionHeight: 95vh;
+    --responsiveFirstSectionHeight: 85vh;
+
+
+}
+
+*::-webkit-scrollbar{
+
+    display:none;
+
+
+}
+
+
+body{
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #0D0D0d !important;
+    overflow-x: none;
+    cursor: default;
+
+}
+
+.redText{
+
+    color: #ee3342 !important;
+
+}
+
+.whiteText{
+
+    color: #FFF !important;
+
+}
+
+.noWrap{
+
+    white-space: nowrap;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+@media screen and (min-width: 1050px) {
+    .gap{
+
+        padding-right: 20px;
+
+    }
+}
+
+/*
+HEADER
+--------------------------------------------------------------------------------------
+This is all styling for the Header, this does not include styling for the navbar. This section is for everything else within the first section.
+*/
+
+.containerBackground{
+    height: var(--firstSectionHeight);
+    overflow-x: hidden;
+    
+
+}
+
+#myVideo{
+
+    overflow-x: hidden;
+    object-fit: fill;
+
+}
+
+.header{
+
+    background-image: url(./assets/wave.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    height: var(--firstSectionHeight);
+
+}
+
+
+
+.greyBackground{
+
+    background-color: rgba(13, 13, 13, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+
+}
+
+.mainBody{
+
+    text-align: center;
+    margin-top: 20vh;
+
+}
+
+.slogan h1{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+    margin: auto;
+    width: fit-content;
+
+
+}
+
+.betterEvents{
+
+    color: #ee3342;
+    transform: translateX(12vw);
+
+}
+
+.betterProductions{
+
+    color: #FFF;
+    transform: translateX(-10vw);
+
+}
+
+.servicesText{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+
+
+}
+
+.getStartedButton{
+
+    margin-top: 10vh;
+
+}
+
+.getStartedButton a{
+
+    padding: 12px 22px 12px;
+    background-color: #0D0D0d;
+    border: #ee3342 solid 3px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: #FFF;
+    transition: 350ms;
+
+
+}
+
+.getStartedButton a:hover{
+
+   background-color: #ee3342;
+   transition: 350ms;
+   color: #0D0D0d;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .containerBackground{
+
+        height: var(--responsiveFirstSectionHeight);
+    }
+    
+    .header{
+        height: var(--responsiveFirstSectionHeight);
+    
+    }
+
+    #myVideo{
+
+        transform: scale( 0.66, 0.66) translateX(-65%) translateY(-25%);
+    }
+
+}
+
+/*
+NAVBAR
+--------------------------------------------------------------------------------------
+All styling for the Nav Bar, none of this code is for anything else
+*/
+
+
+.menuItem{
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+
+
+.menuOptions{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    
+}
+
+.navBarParent{
+
+    height: 15vh;
+
+}
+
+
+.navBar{
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(13,13,13);
+    background: linear-gradient(180deg, rgba(13,13,13,1) 0%, rgba(13,13,13,0.4150035014005602) 72%, rgba(13,13,13,0) 100%);
+    z-index: 999;
+    transition: 350ms;
+    padding-bottom: 20px;
+    
+}
+
+
+.menuText a{
+
+    color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 35px;
+
+}
+
+.about a, .reviews a{
+
+    text-decoration: transparent;
+    transition: 350ms;
+
+}
+
+.about a:hover, .reviews a:hover{
+   
+    text-decoration: #ee3342 solid underline;
+    text-underline-offset: 7px;
+    transition: 350ms;
+    transform: translateY(-3px);
+    
+
+}
+
+
+
+.contactUs a{
+    padding: 20px;
+    border: solid 3px #ee3342;
+    border-radius: 15px;
+    transition: 350ms;
+    width: fit-content;
+
+}
+
+
+.contactUs :hover{
+    
+    background-color: #ee3342;
+    transition: 350ms linear;
+    color: #0D0D0d;
+    transform: translateY(-3px);
+
+
+}
+
+.logo{
+
+    z-index: 999;
+
+}
+
+.logo img{
+
+    box-sizing: border-box;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
+    z-index: 999;
+    
+    
+}
+
+
+.instagramContainer{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(./assets/Transparent\ Instagram\ Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.facebookContainer{
+
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-image: url(./assets/Facebook\ Icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 350ms;
+
+}
+
+.instagramContainer:hover{
+    background-image: url(./assets/Transparent\ Instagram\ Logo\ Red.png);
+    transition: 350ms;
+    transform: translateY(-3px);
+}
+
+.facebookContainer:hover{
+    background-image: url(./assets/Facebook\ Icon\ Red.png);
+    transition: 350ms;
+    transform: translateY(-3px);
+}
+
+/*Styling for transforming the Hamburger Menu into the X when clicked 
+---------------------------------------------------------------------------------------------
+*/
+
+.hamburgerMenu{
+
+display: none;
+z-index: 2;
+
+}
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/*Styling for Side Nav bar when in responsive mode 
+---------------------------------------------------------------------------------------------
+*/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #0D0D0d; /* Black*/
+    overflow-x: none; /* Disable horizontal scroll */
+    padding-top: 140px; /* Place content 60px from the top */
+    transition: 0.5s;  /*0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 32px 8px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover{
+    background-color: #ee3342;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 700px) {
+    .sidenav {padding-top: 140px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+/*Media Quires for making the page responsive when you click on different things
+--------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1300px) {
+    
+    .menuItem{
+
+        display: none;
+
+    }
+
+    .contactUs{
+
+        display: flex;
+
+    }
+
+    .navBar{
+     
+        grid-template-columns: 3fr 1fr;
+        
+    }
+
+    .hamburgerMenu{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .menuOptions{
+
+        margin-right: 40px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .contactUs{
+
+        display: none;
+
+    }
+
+    .menuOptions{
+
+        margin-right: 40px;
+
+    }
+
+    .logo img{
+
+        width: 240px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 40px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 15px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .slogan h1{
+
+        font-size: 28px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 2vh;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .logo img{
+
+        width: 180px;
+         
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .logo img{
+
+        width: 120px;
+         
+    }
+
+    .slogan h1{
+
+        font-size: 15px;
+
+    }
+
+    .servicesText p{
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/*
+Styling for the Logo Section of the page
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.logoSection{
+
+    background-color: #0D0D0d;
+    transform: translateY(-1px);
+    padding: 5.1vh 0vh 5vh;
+    
+
+}
+
+.logoImages{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logoImages img{
+
+    max-width: 25vw;
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .logoImages{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .logoImages img{
+
+       padding: 5vh;
+       margin: auto;
+       max-width: 75vw;
+    }
+
+    .logoSection{
+
+        padding-top: 10.1vh;
+
+    }
+
+}
+
+
+
+
+/*
+Styling for the company information section
+------------------------------------------------------------------------------------------------------------------------
+*/
+.companyInfo{
+
+    padding: 10vh 0vh 25vh ;
+
+}
+
+.whoWeAre{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+
+}
+
+.whoWeAreText{
+
+display: flex;
+
+flex-direction: column;
+
+text-align: center;
+
+justify-content: center;
+}
+
+.whoWeAreText h2{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0% 10% 5%;
+    font-size: 8vh;
+    
+}
+
+
+.whoWeAreText p{
+
+color: #FFF;
+
+margin: 0px 2vw 0px;
+
+font-family: 'Roboto Condensed', sans-serif;
+
+font-size: 3vh;
+
+text-align: left;
+}
+
+.whoWeAreImages{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.whoWeAreImages img{
+
+    width: 40vw;   
+    height: auto;
+    margin: auto;
+
+}
+
+.whatWeDoText{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.whatWeDoText h2{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0% 10% 5%;
+    font-size: 8vh;
+    text-align: center;
+    
+}
+
+
+
+.whatWeDoText p{
+
+    color: #FFF;
+    margin: 0px 2vw 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3vh;
+    text-align: left; 
+}
+
+.whatWeDo{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 25vh;
+
+
+}
+
+.whatWeDoImages{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.whatWeDoImages img{
+
+    width: 40vw;   
+    height: auto;
+    margin: auto;
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .whoWeAre{
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    .whoWeAreImages img{
+
+        padding-top: 10vh;
+        width: 85vw;
+        height: auto !important;
+        object-fit: contain !important;
+
+    }
+    .whatWeDo{
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 1 2;
+
+    }
+    .whatWeDoText{
+
+       grid-area: 1;
+    }
+    .whatWeDoImages img{
+
+        padding-top: 10vh;
+        width: 85vw;
+        height: auto !important;    
+    }
+
+    .companyInfo{
+
+    padding-bottom: 25vh;
+
+    }
+
+    .whatWeDoText p{
+
+    text-align: center;
+    
+    font-size: 2.75vh;
+    
+    }
+    
+    .whoWeAreText p{
+    
+    text-align: center;
+    
+    font-size: 2.75vh;
+    
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 650px) {
+    
+    .whoWeAreImages img{
+
+        padding-top: 10vh;
+        width: 100vw;
+        height: auto !important;
+        object-fit: contain !important;
+
+    }
+
+    .whatWeDoImages img{
+
+        padding-top: 10vh;
+        width: 100vw;
+        height: auto !important;
+    
+    }
+
+    .whatWeDoText p{
+
+        text-align: center;
+        font-size: 2.2vh;
+
+    }
+
+    .whoWeAreText p{
+
+        text-align: center;
+        font-size: 2.2vh; 
+
+    }
+}
+
+
+
+/*
+Styling for the what we offer section
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.whatWeOffer{
+
+    margin-top: 20vh;
+
+}
+
+.whatWeOffer h2{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8vh;
+    font-weight: 400;
+    text-align: center ;
+
+}
+
+
+
+.whatWeOfferChild{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+
+}
+
+.whatWeOfferSection{
+
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    width: 25vw;
+    height: 25vw;
+    margin: 5vh auto;
+    border-radius: 15px;
+    border: #ee3342 solid 3px;
+
+
+}
+
+.greyFilter{
+
+    background-color: rgba(13, 13, 13, 0.8);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+.whatWeOfferSection h3{
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vh;
+    font-weight: 400;
+
+}
+
+.whatWeOfferSection img{
+
+    width: 10vw;
+    height: 10vw;
+    padding: 20px;
+    margin: 0px auto;
+
+
+}
+
+.whatWeOfferSection p{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2vh;
+    font-weight: 400;
+    padding: 0px 20px 10px;
+
+
+}
+
+.whatWeOfferSection p:hover{
+
+   cursor: default;
+
+
+}
+
+
+.whatWeOfferSection a{
+
+    background-color: rgba(13, 13, 13);
+    border: #ee3342 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    font-size: 2vh;
+    
+
+}
+
+.whatWeOfferSection a:hover{
+
+    background-color: #ee3342;
+    color: #0D0D0d;
+
+}
+
+
+.learnMore{
+
+   display: none;
+
+}
+
+.audio{
+
+    background-image: url(./assets/Line\ Array.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.lighting{
+
+    background-image: url(./assets/lightingHead.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.photoBooth{
+
+    background-image: url(./assets/photoBooth.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.productionServices{
+
+    background-image: url(./assets/Vector\ works.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.dj{
+
+    background-image: url(./assets/CDJs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.monogram{
+
+    background-image: url(./assets/monogram.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.fixedContent{
+
+    position: relative;
+    
+}
+
+.appearContent{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 13, 13, 0);
+    border-radius: 10px;
+    transition: 500ms;
+    
+
+}
+
+.appearContent > *{
+
+    transform: translateY(20px);
+    transition: 350ms;
+
+}
+
+.greyFilter:hover > .appearContent{
+
+    opacity: 1;
+    transition: 500ms;
+    background-color: rgba(13, 13, 13, 0.75);
+
+
+
+}
+
+.appearContent:hover > *{
+
+    transform: translateY(0px);
+
+
+}
+
+.mobileViewOnly{
+
+    display: none;
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+
+    .whatWeOfferChild{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    
+    
+    }
+
+    .whatWeOfferSection{
+
+        width: 75vw;
+        height: 75vw;
+        
+    
+    
+    }
+
+    .whatWeOfferSection img{
+
+        width: 30vw;
+        height: 30vw;
+        
+    }
+
+    .whatWeOfferSection p{
+
+        font-size: 2vh;
+
+    }
+
+    .whatWeOfferSection a{
+
+        background-color: rgba(13, 13, 13);
+        border: #ee3342 3px solid;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        color: #FFF;
+        font-size: 1.5vh;
+        
+    
+    }
+
+    .mobileViewOnly{
+
+        display: block;
+        font-size: 18px;
+
+    }
+
+}
+
+
+/*
+Styling for the featured event section
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.featuredEvent{
+
+    background-image: url("./assets/Enhanced\ Image.jpeg");
+    background-position: 50% 0;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.eventText{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    color: #FFF;
+
+}
+
+.explanationText{
+
+    font-family: 'Montserrat', sans-serif;
+    width: fit-content;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 3vh; 
+
+}
+
+.explanationText h2{
+
+    color: #ee3342;
+    font-weight: 400;
+
+}
+
+.explanationText h3{
+
+    padding: 3vh 7vh 0px;
+    border-top: #FFF solid 3px;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.eventDiscription{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-end;
+    padding: 5vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 3vh;
+    background: rgb(13,13,13);
+    background: linear-gradient(0deg, rgba(13,13,13,1) 13%, rgba(13,13,13,0.4150035014005602) 78%, rgba(13,13,13,0) 100%);
+
+}
+/*
+Styling for the spacer between the featured event and the more info section
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.spacer{
+
+    background-color: #0D0D0d;
+    height: 10vh;
+
+
+}
+
+
+/*
+Styling for the more info sections with the boxes that have links
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.moreInfo{
+
+background-color: #0D0D0d;
+
+padding-top: 5vh;
+
+/* padding-bottom: 15vh; */
+}
+
+.moreInfoTitle{
+
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6vh;
+    text-align: center;
+    padding: 1vh;
+    
+    
+
+}
+.moreInfoTitle h2{
+    font-weight: 400;
+
+}
+
+.moreInfoBoxContainer{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+.contactUsInfo{
+
+    
+    background-image: url(./assets/Lighting\ Blured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:500ms;
+    background-position: 50% 50%;
+}
+
+.reviewsInfo{
+
+    
+    background-image: url(./assets/singing.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:300ms;
+    background-position: 50% 0;
+
+
+}
+
+.aboutInfo{
+
+    background-image: url(./assets/fusonBack.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:300ms;
+    background-position: 50% 0;
+
+
+}
+
+.boxElement:hover{
+    
+    transform: scale(1.075,1.075);
+    border-radius: 15px;
+    transition: 300ms;
+    z-index: 2;
+
+}
+
+.h3BoxElement h3{
+
+    font-size: 6vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #ee3342;
+    font-weight: 400;
+    margin-bottom: 0px;
+    
+
+}
+
+.boxElementItemsContainer{
+
+    opacity: 0;
+    transition: 350ms;
+
+}
+.boxElementFilter{
+
+    background-color: #FFF;
+    text-align: center;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 30px;
+    background-color: rgba(13, 13, 13, 0.75);
+    transition: 350ms;
+
+}
+
+.boxElementFilter:hover{
+
+    transition: 350ms;
+    background-color: rgba(13, 13, 13, 0.9);
+    border-radius: 15px;
+
+
+}
+
+
+.boxElementFilter:hover > .boxElementItemsContainer{
+
+    opacity: 100;
+    transition: 350ms;
+}
+
+.pBoxElement{
+
+    color: #FFF;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 2vh;   
+    font-size: 2vh;
+
+}
+
+.aBoxElement{
+
+    margin-top: 40px;
+
+}
+
+.aButton{
+
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D0D0d;
+    color: #FFF;
+    text-decoration: none;
+    padding: 20px;
+    border: #ee3342 solid 3px;
+    border-radius: 10px;
+    transition: 350ms;
+
+}
+
+.aButton:hover{
+
+    background-color: #ee3342;
+    transition: 350ms;
+    color: #0D0D0d;
+
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+
+    .moreInfoBoxContainer{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .boxElementFilter{
+
+height: 100%;
+
+width: 100vw;
+
+padding: 0px;
+
+}
+
+    .boxElement{
+
+margin-top: 5vh;
+
+}
+
+    .boxElement:hover{
+    
+        transform: scale(1,1);
+    }
+
+    .h3BoxElement{
+
+        background: rgb(13,13,13);
+        background: linear-gradient(180deg, rgba(13,13,13,1) 13%, rgba(13,13,13,0.4150035014005602) 78%, rgba(13,13,13,0) 100%);
+
+    }
+
+    .boxElementFilter > .boxElementItemsContainer{
+
+        opacity: 100;
+        transition: 350ms;
+    }
+
+    .boxElementFilter{
+
+        transition: 350ms;
+        background-color: rgba(13, 13, 13, 0.8);
+    
+    
+    }
+
+    
+
+
+
+}
+
+
+/*
+Styling for the spacer between the more info section and the instagram feed
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.spacerXL{
+
+    background-color: #FFF;
+    height: 50vh;
+
+
+}
+
+/*
+Styling for the instagram feed
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.instagramFeed{
+
+    background-color: #FFF;
+
+}
+
+.pluggedInStuff{
+    padding-bottom: 5vh;
+
+
+}
+
+.instagramFeedTitle{
+
+    padding: 40px;
+    color:#0D0D0d;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .instagramFeedTitle{
+
+        font-size: 2vh;
+    }
+
+
+}
+
+  /*
+Styling for the Footer of the website
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.footer{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10vh;
+    padding: 5vh;
+
+}
+
+.topFooter{
+
+display: grid;
+
+grid-template-rows: 1fr;
+
+grid-template-columns: 3fr 2fr;
+
+border-bottom: solid 1.5px #FFF;
+
+grid-column-gap: 10vw;
+
+padding: 5vh 0px;
+}
+
+.footerLinks{
+
+    margin:auto 0px auto;
+
+}
+
+.aFooterLinks{
+
+    border-bottom: 3px solid transparent;
+    transition: 350ms;
+
+}
+
+.aFooterLinks:hover{
+
+    border-bottom: 3px solid #ee3342;
+    transform: translateY(-3px);
+    transition: 350ms;
+    color: #FFF !important;
+
+}
+
+.linkList{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footerContactInfo{
+
+   margin: auto 0px auto;
+
+}
+
+.contactInfoContainer{
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: auto 0px;
+
+}
+
+.pContactInfoContainer{
+
+    margin: auto;
+
+    color: #FFF;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.pContactInfoContainer p{
+
+    margin: 0px;
+
+}
+
+.aFooterLinks{
+
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.5vh;
+    height: fit-content;
+
+
+}
+
+.footerSocialParent{
+
+    margin:auto;
+    display: flex;
+
+}
+
+.footerSocial:hover{
+
+    transform: translateY(-3px);
+
+}
+
+.footerImageContainer{
+
+    margin-top: auto;
+
+}
+
+.footerImageContainer img{
+
+    width: 20vw;
+    padding-right: 20px;
+
+
+}
+
+.footerCompanyInfo p{
+
+    color:#FFF;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vh;
+    margin: 0px;
+
+}
+
+.footerCompanyInfo{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.bottomFooter{
+
+display: flex;
+
+justify-content: space-between;
+}
+
+.pHandler{
+
+    margin-top: auto;
+
+}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+@media only screen and (max-width: 1300px) {
+
+    .pContactInfoContainer{
+
+        font-size: 1.8vw;
+
+    }
+
+    .aFooterLinks{
+
+font-size: 2.1vh;
+
+}
+    .topFooter{
+
+        grid-column-gap: 5vw;;
+
+    }
+
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+
+    .linkList{
+
+flex-wrap: wrap;
+
+justify-content: space-around;
+
+}
+
+    .aFooterLinks{
+
+        font-size: 3vh;
+        margin: 20px;
+
+    }
+
+    .topFooter{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+
+    }
+    .aFooterLinks{
+        text-align: center;
+
+    }
+
+    .bottomFooter{
+
+        flex-direction: column ;
+        justify-content: center;
+
+    }
+    .footerImageContainer{
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 20px;
+       
+
+    }
+
+    .footerImageContainer img{
+
+        width: 50vw;
+        padding: 20px;
+
+    }
+
+    .footer{
+
+        grid-template-rows: 3fr 2fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+    .pHandler p{
+
+        font-size: 1.5vh;
+        text-align: center;
+        padding: 0px 2.5px 10px
+
+    }
+
+    .footerCompanyInfo{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+        font-size: 2.5vw;
+
+    }
+
+    .contactInfoContainer{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .footer{
+
+        grid-template-rows: 2fr 1fr;
+        padding: 0px;
+        grid-row-gap: 0vh;
+
+    }
+
+
+    .contactInfoContainer{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .pContactInfoContainer{
+
+        justify-content: center;
+
+    }
+
+    .pContactInfoContainer{
+
+font-size: 6vw;
+
+}
+
+.footerImageContainer img{
+
+    width: 75vw;
+    padding: 0px;
+
+}
+
+.linkList{
+
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    
+    }
+
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .linkList{
+
+        justify-content: center;
+
+    }
+
+}
+
+@media only screen and (max-width: 200px) {
+
+    .pContactInfoContainer{
+
+        font-size: 5vw;
+
+    } 
+
+}
+
+
